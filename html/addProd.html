@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Product</title>
+  <link rel="stylesheet" href="../css/addProd.css">
+</head>
+<body>
+   <header>  
+    <a href="../html/eCom.html">
+    <img src="../assets/logo1.png" alt="" height="60px" class="logo">
+    </a>
+
+        <h1>Add Product</h1>
+
+  </header>
+
+  <section>
+      <div class="head-section">
+       <a href="../html/eCom.html"><img src="../assets/back-arrow.png" alt="" height="40px" ></a>
+
+       <button class="add-product" id="openModal">Add</button>
+      </div>
+
+    <div class="products-data" id="prodData">
+      <table>
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Sports</th>
+              <th>Brand</th>
+              <th>Product name</th>
+              <th>Price</th>
+              <th>Stocks</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="addProds">
+      
+          </tbody>
+        </table>
+
+     
+    </div>
+    <div class="add-modal" id="addModal">
+       <div class="close-modal" id="closeModal"><img src="../assets/close.png" alt="" height="20px"/></div>
+      <h1>Product Info</h1>
+
+      <div class="fields">
+        <label for="sports"> <p>Sports</p>
+          <select name="sports" id="selectSports">
+        <option value="none">Select a sport</option>
+        <option value="Basketball" >Basketball</option>
+        <option value="Volleyball">Volleyball</option>
+        <option value="Soccer">Soccer</option>
+        <option value="Tennis">Tennis</option>
+        <option value="Baseball">Baseball</option>
+      </select>
+        </label>
+        <label for="name"><p>Name</p> <input type="text" id="name"></label>
+        <label for="brand"><p>Brand</p> <input type="text" id="brand"></label>
+        <div class="priceQty">
+          <label for="price"> <p>Price</p> <input type="number" id="price"></label><label for="qty"><p>Stocks</p> <input type="number" id="qty"></label></div>
+        <label for="images"> <input type="file" id="images"></label>
+      </div>
+      <button class="add-prod" id="addProd">Add</button>
+    </div>
+
+    <div class="confirm-modal" id="confirmModal">
+      <h1>Are you sure?</h1>
+      <h3>Are you sure to remove this product?</h3>
+
+      <div class="confirm-buttons">
+        <button id="yes">Yes</button>
+        <button id="no">No</button>
+      </div>
+    </div>
+  </section>
+  <script src="../javascript/addProd.js"></script>
+</body>
+</html>

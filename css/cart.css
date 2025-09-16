@@ -1,0 +1,364 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1px;
+  background-color: black;
+  width: 100%;
+  height: 100px;
+}
+
+header > .logo{
+  cursor: pointer;
+}
+
+header > .rightNavs{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+}
+
+header > .rightNavs > .link-ball{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+  cursor: pointer;
+  list-style-type: none;
+}
+
+
+header >  .rightNavs > .other-navs{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 40%;
+  padding-inline: 10px;
+}
+
+header >  .rightNavs > .other-navs > .profile{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 10px;
+  width: 60%;
+  color: white;
+  border: 1px solid white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+header >  .rightNavs > .other-navs > .profile > p{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+}
+
+header >  .rightNavs > .other-navs > .cart-path > .cart{
+  cursor: pointer;
+}
+
+header >  .rightNavs > .other-navs >.profile-dropdown{
+  opacity: 0;
+  max-height: 0; 
+  overflow: hidden;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 9;
+
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  right: 8px;
+  background-color: rgba(0, 0, 0, 0.50);
+  border: 1px solid black;
+  width: 23%;
+  height: 120px;
+}
+
+header >  .rightNavs > h1{
+  color: white;
+  font-size: 60px;
+}
+
+header >  .rightNavs > .other-navs >.profile-dropdown.active {
+  opacity: 1;
+  max-height: 200px; 
+  pointer-events: auto;
+}
+
+.dropDownNavs{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  column-gap: 10px;
+  padding: 5px;
+  height: 40%;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+
+.dropDownNavs:hover{
+  background-color: black;
+}
+
+.products{
+  width: 100%;
+  height: 87.8vh;
+}
+
+section > .filters{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 10px;
+  padding-inline: 10px;
+  height: 10%;
+  border: 1px solid black;
+}
+
+
+section > .filters > div > label{
+  font-size: 20px;
+}
+section > .filters > div > label > select{
+  height: 40px;
+  width: 150px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+section > .filters > div > label > select > option{
+  font-weight: bold;
+}
+
+section > .filters > div > .reciept-path{
+  border: 1px solid black;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+.products > .product-cart{
+  position: relative;
+  width: 100%;
+  height: 90%;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  overflow: auto;
+  gap: 10px;
+}
+
+.product-cart > .product-cont {
+  display: flex;
+  border: 3px solid black;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  height: 49.6%;
+  width: 49.6%; 
+  box-sizing: border-box;
+}
+
+.product-cont > .prod-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 3px solid black;
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+}
+.remove-toCart{
+  align-self: flex-end;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 5px;
+  transition: background-color 0.4s ease;
+}
+
+.remove-toCart:hover{
+  background-color: red;
+  color: white;
+}
+.product-cont > .prod-images > img{
+  height: 250px;
+}
+.product-cont > .prod-info{
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 60%;
+}
+
+.product-cont > .prod-info > .prod-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0;
+  gap: 5px;
+  height: 35%;
+  width: 100%;
+}
+
+.prod-desc > .name {
+  font-size: 30px;
+  font-weight: bold;
+
+  text-align: center;
+}
+
+.prod-desc > .price {
+  font-size: 50px;
+  color: #555;
+  text-align: center;
+}
+
+.quantity-cost{
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: 5px;
+  font-size: 20px;
+}
+
+
+.quantity-cost > label>input{
+  font-size: 16px;
+  width: 50%;
+  padding-inline-start: 2px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid black;
+}
+
+.product-cont > .prod-info > .prod-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 13%;
+  width: 100%;
+}
+
+.prod-buttons > button {
+  width: 50%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 16px;
+  color: white;
+  background-color: #7ED957;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.prod-buttons > button:hover {
+  background-color: #5dbf41;
+}
+
+
+.confirm-modal{
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  position: absolute;
+  background-color: #ffffff;
+  height: 350px;
+  width: 30%;
+  top: 170px;
+  z-index: 999;
+  border: 3px solid black;
+  transform: translate(120%, 30%);
+}
+
+.confirm-modal > h1, .confirm-modal > h3{
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.confirm-modal > h1{
+  font-size: 50px;
+}
+.confirm-modal > h3{
+  font-size: 30px;
+  text-align: center;
+}
+
+.confirm-modal > .confirm-buttons{
+  height: 30%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.confirm-modal > .confirm-buttons > button{
+  width: 30%;
+  height: 40%;
+  border-radius: 25px;
+background-color: #5dbf41;
+  font-size: 24px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.empty-msg-card{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 99%;
+  height: 85%;
+}
+
+.empty-msg{
+  font-size: 30px;
+  font-weight: bold;
+}

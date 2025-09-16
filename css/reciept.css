@@ -1,0 +1,197 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  padding-inline: 10px;
+  width: 100%;
+  height: 70px;
+}
+
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  width: 100%;
+}
+
+section > .reciept{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border: 5px solid black;
+  border-radius: 20px;
+  padding: 10px;
+  height: 700px;
+  width: 40%;
+}
+
+hr{
+  width: 100%;
+  border: 2px solid black;
+}
+
+section > .reciept > img{
+  height: 70px;
+}
+
+section > .reciept > h1{
+  font-size: 35px;
+}
+
+section > .reciept > .date-time{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 60px;
+  font-size: 22px;
+}
+
+section > .reciept > .info{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 100%;
+  height: 90px;
+  font-size: 22px;
+}
+
+section > .reciept > .reciept-cost{
+  position: relative;
+  width: 100%;
+  height: 65%;
+}
+
+
+section > .reciept > .reciept-cost >
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td,th{
+  padding: 8px 12px;
+  text-align: left;
+  font-size: 24px;
+}
+
+section > .reciept > .reciept-cost{
+  overflow: auto;
+}
+
+section > .reciept > .cost{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 10%;
+  padding-inline-end: 30px;
+}
+
+section > .reciept > button{
+  align-self: flex-end;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 16px;
+  color: white;
+  background-color: #7ED957;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+section > .reciept > button:hover {
+  background-color: #5dbf41;
+}
+.removeProd{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+.confirm-modal{
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  position: absolute;
+  background-color: #ffffff;
+  height: 350px;
+  width: 30%;
+  top: 170px;
+  z-index: 999;
+  border: 3px solid black;
+  transform: translate(0, 20%);
+}
+
+.confirm-modal > h1, .confirm-modal > h3{
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+  .confirm-modal > h1{
+    font-size: 50px;
+  }
+  .confirm-modal > h3{
+    font-size: 30px;
+    text-align: center;
+  }
+
+.confirm-modal > .confirm-buttons{
+  height: 30%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.confirm-modal > .confirm-buttons > button{
+  width: 30%;
+  height: 40%;
+  border-radius: 25px;
+background-color: #5dbf41;
+  font-size: 24px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.empty-msg-card{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 99%;
+  height: 85%;
+}
+
+.empty-msg{
+  font-size: 30px;
+  font-weight: bold;
+}

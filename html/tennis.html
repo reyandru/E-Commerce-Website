@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tennis</title>
+  <link rel="stylesheet" href="../css/sports.css">
+
+</head>
+<body>
+      <header class="tennis-header">  
+  <a href="../html/eCom.html">
+    <img src="../assets/logo2.png" alt="" height="60px" class="logo">
+    </a>
+
+    <div class="rightNavs">
+  <h1 class="sport-page">Tennis balls</h1>
+
+      <div class="other-navs">
+        <a href="../html/cart.html" class="cart-path">
+        <img src="../assets/cart.png" alt="" height="50px" class="cart">
+        </a>
+        <div class="profile" id="profile">
+          <img src="../assets/defProfile.png" alt="" height="50px">
+          <p>Username <img src="../assets/dropDownArr.png" alt="" height="10px"> </p>
+        </div>
+
+        <div class="profile-dropdown showDropDown" id="profDropDown">
+          <p class="dropDownNavs"><img src="../assets/defProfile.png" alt="" height="30px"> Username</p>
+          <p class="dropDownNavs"><img src="../assets/logout.png" alt="" height="30px"> Logout</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="products" id="prods">
+    <div class="filters">
+
+
+
+   <input type="text" class="search-items" id="searchItems" placeholder="Search...">
+
+
+      <label for="sportsFilter" class="sports-filter">By sports:
+      <select name="sports" id="sportsFilter">
+        <option value="all">All</option>
+        <option value="Basketball" >Basketball</option>
+        <option value="Volleyball">Volleyball</option>
+        <option value="Soccer">Soccer</option>
+        <option value="Tennis">Tennis</option>
+        <option value="Baseball">Baseball</option>
+      </select>
+</label>
+
+<label for="brandFilter">By brands: 
+<select name="sports" id="brandFilter">
+  <option value="all">All</option>
+  <option value="Wilson">Wilson</option>
+  <option value="Spalding">Spalding</option>
+  <option value="Molten">Molten</option>
+  <option value="Nike">Nike</option>
+  <option value="Baden">Baden</option>
+  <option value="Mikasa">Mikasa</option>
+  <option value="Tachikara">Tachikara</option>
+  <option value="Dunlop">Dunlop</option>
+  <option value="Babolat">Babolat</option>
+  <option value="Penn">Penn</option>
+  <option value="Slazenger">Slazenger</option>
+  <option value="Adidas">Adidas</option>
+  <option value="Puma">Puma</option>
+  <option value="Select">Select</option>
+  <option value="Mitre">Mitre</option>
+  <option value="Rawlings">Rawlings</option>
+  <option value="Easton">Easton</option>
+  <option value="Diamond">Diamond</option>
+  <option value="Champro">Champro</option>
+</select>
+</label>
+
+    </div>
+
+    <div class="product-list" id="prodList">
+      
+    </div>
+  </section>
+
+ <script type="module" src="../javascript/eCom.js"></script>
+  <script type="module" src="../javascript/tennis.js"></script>
+</body>
+</html>

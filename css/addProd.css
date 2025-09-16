@@ -1,0 +1,276 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1px;
+  background-color: black;
+  width: 100%;
+  height: 100px;
+  color: white;
+  padding-inline: 10px;
+}
+
+header > .logo{
+  cursor: pointer;
+}
+
+header > h1{
+  font-size: 60px;
+}
+
+section{
+  position: relative;
+  width: 100%;
+  height: 87.7vh;
+}
+
+section > .head-section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+section > .head-section > button{
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  width: 7%;
+  color: white;
+  background-color: #7ED957;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+section > .head-section > button:hover {
+  background-color: #5dbf41;
+}
+
+section > .products-data{
+  position: relative;
+  overflow: auto;
+}
+
+table{
+  width: 100%;
+  height: 10%;
+  border-collapse: collapse;
+}
+
+td,th{
+  padding: 8px 12px;
+  text-align: left;
+  font-size: 24px;
+}
+
+tr{
+  border: 1px solid black;
+}
+
+
+.removeProd{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+section > .add-modal{
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  background-color: #ffffff;
+  height: 500px;
+  width: 50%;
+  top: 170px;
+  z-index: 999;
+  border: 3px solid black;
+  transform: translate(50%, -15%);
+}
+
+.add-modal > h1{
+  font-size: 60px;
+}
+
+.add-modal > .fields{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 75%;
+  width: 100%;
+}
+
+.add-modal > .fields > label{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline:10px;
+  width: 100%;
+}
+
+.add-modal > .fields > label > p{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.add-modal > .fields > .priceQty {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+
+.add-modal > .fields > label > p, .add-modal > .fields > .priceQty> label > p{
+  border: 1px solid black;
+  padding: 10px 50px;
+  font-size: 24px;
+}
+
+
+.add-modal > .fields > .priceQty> label{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 47%;
+  column-gap: 10px;
+}
+
+.add-modal > .fields > label > input,.add-modal > .fields > .priceQty> label > input, .add-modal > .fields > label > select {
+  width: 75%;
+  padding: 12px;
+  font-size: 20px;
+}
+
+.add-modal > .fields > label > select{
+  cursor: pointer;
+}
+
+
+.add-modal > .add-prod{
+  margin: 10px;
+  align-self: flex-end;
+  padding: 10px 25px;
+  border-radius: 15px;
+  font-size: 16px;
+  color: white;
+  background-color: #7ED957;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-modal > .add-prod:hover {
+  background-color: #5dbf41;
+}
+
+.close-modal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7%;
+  height: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: end;
+  font-size: 30px;
+  margin: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.close-modal:hover{
+  color: red;
+}
+
+.confirm-modal{
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  position: absolute;
+  background-color: #ffffff;
+  height: 350px;
+  width: 30%;
+  top: 170px;
+  z-index: 999;
+  border: 3px solid black;
+  transform: translate(120%, -5%);
+}
+
+.confirm-modal > h1, .confirm-modal > h3{
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+  .confirm-modal > h1{
+    font-size: 50px;
+  }
+  .confirm-modal > h3{
+    font-size: 30px;
+    text-align: center;
+  }
+
+.confirm-modal > .confirm-buttons{
+  height: 30%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.confirm-modal > .confirm-buttons > button{
+  width: 30%;
+  height: 40%;
+  border-radius: 25px;
+background-color: #5dbf41;
+  font-size: 24px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.products-data{
+  border: 1px solid black;
+  height: 91%;
+  position: relative;
+}
+
+.empty-msg-card{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 99%;
+  height: 85%;
+}
+
+.empty-msg{
+  font-size: 30px;
+  font-weight: bold;
+}
