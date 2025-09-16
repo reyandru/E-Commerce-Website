@@ -243,5 +243,5 @@ modal.querySelector('#addToCart').addEventListener('click', () => {
 if (savedProducts.length > 0) {
   renderProductList();
 } else {
-  productList.innerHTML = '<div class="empty-msg-card"><img src="../assets/empty-storage.png" alt="empty-storage" height="300"/> <p class="empty-msg">No products available.</p></div>';
+  productList.innerHTML = '<div class="empty-msg-card"><img src="assets/empty-storage.png" alt="empty-storage" height="300"/> <p class="empty-msg">No products available.</p></div>';
 }
