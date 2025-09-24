@@ -23,3 +23,20 @@ HTML
 CSS
 
 JavaScript (Vanilla)
+
+
+🧪 How It Works
+
+Product Display
+The page displays at least 5 products, each with a name, image (optional), price, and "Add to Cart" button.
+
+Cart Functionality
+
+Users can add or remove items from the cart.
+
+The cart updates in real-time.
+
+Total price is recalculated automatically as products are added or removed.
+
+Dynamic UI
+The cart and total are updated live using JavaScript DOM manipulation.
